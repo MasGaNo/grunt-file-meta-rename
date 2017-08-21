@@ -1,0 +1,41 @@
+{
+  "name": "grunt-file-meta-rename",
+  "version": "0.1.0",
+  "description": "Rename files based on their metadata.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && grunt",
+    "debug": "tsc && grunt --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "grunt": "1.0.1",
+    "crc": "3.4.4"
+  },
+  "devDependencies": {
+    "@types/crc": "3.4.0",
+    "@types/grunt": "0.4.21",
+    "@types/node": "8.0.24",
+    "typescript": "^2.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasGaNo/grunt-file-meta-rename.git"
+  },
+  "keywords": [
+    "grunt",
+    "plugin",
+    "file",
+    "metadata",
+    "rename"
+  ],
+  "author": "Norbert TRAN PHAT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MasGaNo/grunt-file-meta-rename/issues"
+  },
+  "homepage": "https://github.com/MasGaNo/grunt-file-meta-rename#readme"
+}
