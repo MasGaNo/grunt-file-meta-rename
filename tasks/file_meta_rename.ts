@@ -39,6 +39,8 @@ export = function (grunt: IGrunt) {
             tokens: {}
         } as TOptions);
 
+        let count = 0;
+
         this.files.forEach((file) => {
 
             file.src!.forEach((filepath) => {
@@ -75,10 +77,13 @@ export = function (grunt: IGrunt) {
 
                 fs.renameSync(target, targetPath);
                 grunt.log.verbose.writeln(`Move ${target} to ${targetPath}`);
+                ++count;
             });
 
 
-        })
+        });
+
+        grunt.log.writeln(`Move ${count} file(s).`);
 
     });
 }

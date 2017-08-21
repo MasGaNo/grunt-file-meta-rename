@@ -11,8 +11,10 @@ function tokenize(fileMeta, options) {
 module.exports = function (grunt) {
     grunt.registerMultiTask('file_meta_rename', 'Rename files using their metadata', function () {
         var options = this.options({
-            filename: '{name}.{ext}'
+            filename: '{name}.{ext}',
+            tokens: {}
         });
+        var count = 0;
         this.files.forEach(function (file) {
             file.src.forEach(function (filepath) {
                 var cwd = file.cwd;
@@ -44,7 +46,9 @@ module.exports = function (grunt) {
                 var targetPath = rootFolder + "/" + targetName;
                 fs.renameSync(target, targetPath);
                 grunt.log.verbose.writeln("Move " + target + " to " + targetPath);
+                ++count;
             });
         });
+        grunt.log.writeln("Move " + count + " file(s).");
     });
 };
